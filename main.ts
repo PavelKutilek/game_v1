@@ -11,6 +11,7 @@ input.onButtonPressed(Button.B, function () {
     hrac.change(LedSpriteProperty.X, 1)
 })
 let hrac: game.LedSprite = null
+radio.setGroup(1)
 hrac = game.createSprite(2, 2)
 let zombie = game.createSprite(0, 0)
 game.setScore(0)
@@ -19,6 +20,8 @@ basic.forever(function () {
         zombie.set(LedSpriteProperty.X, randint(0, 4))
         zombie.set(LedSpriteProperty.Y, randint(0, 4))
         game.addScore(1)
+        basic.pause(500)
         basic.showNumber(game.score())
+        basic.pause(500)
     }
 })
